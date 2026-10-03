@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Günlük Özet & Bilgi Kartı -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="2dp"
+            app:cardBackgroundColor="@color/surface"
+            app:strokeColor="@color/card_border"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/tvTodayDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bugün: 30 Eylül 2026"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/primary" />
+
+                <TextView
+                    android:id="@+id/tvSummaryTasks"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="• Bekleyen Mesaj: 0 | Planlanan Arama: 0 | Hatırlatıcı: 0"
+                    android:textSize="14sp"
+                    android:textColor="@color/text_secondary" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- SESLİ ASİSTAN BUTONU (ÖZEL VURGULU BÜYÜK BUTON) -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnVoiceAssistant"
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:text="🎙️ SESLİ ASİSTAN (Konuşarak Görev Planla)"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            app:cornerRadius="14dp"
+            app:backgroundTint="@color/primary"
+            android:textColor="@color/on_primary"
+            android:layout_marginBottom="16dp" />
+
+        <!-- BÜYÜK BUTONLAR (ANA İŞLEM IZGARASI) -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ana İşlemler"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="12dp" />
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:rowCount="5"
+            android:alignmentMode="alignMargins"
+            android:columnOrderPreserved="false"
+            android:useDefaultMargins="true">
+
+            <!-- 1. MESAJ GÖNDER -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSendMessage"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_send_message"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_dialog_email"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_msg_bg"
+                android:textColor="@color/btn_msg_text"
+                app:iconTint="@color/btn_msg_text" />
+
+            <!-- WHATSAPP MESAJ GÖNDER (YENİ ÖZEL BUTON) -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnWhatsAppMessage"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_whatsapp_message"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_dialog_email"
+                app:iconGravity="textStart"
+                app:backgroundTint="#DCFCE7"
+                android:textColor="#15803D"
+                app:iconTint="#15803D" />
+
+            <!-- 2. ZAMANLA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnScheduleMessage"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_schedule_message"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_today"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_time_bg"
+                android:textColor="@color/btn_time_text"
+                app:iconTint="@color/btn_time_text" />
+
+            <!-- 3. TOPLU MESAJ -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBulkMessage"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_bulk_message"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_share"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_msg_bg"
+                android:textColor="@color/btn_msg_text"
+                app:iconTint="@color/btn_msg_text" />
+
+            <!-- 4. KİŞİLER & GRUPLAR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnContacts"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_contacts"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_myplaces"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/surface"
+                android:textColor="@color/text_primary"
+                app:strokeColor="@color/card_border"
+                app:strokeWidth="1dp"
+                app:iconTint="@color/primary" />
+
+            <!-- 5. DOĞUM GÜNLERİ -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBirthdays"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_birthdays"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/star_big_on"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_bday_bg"
+                android:textColor="@color/btn_bday_text"
+                app:iconTint="@color/btn_bday_text" />
+
+            <!-- 6. HATIRLATICILAR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnReminders"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_reminders"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_popup_reminder"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_time_bg"
+                android:textColor="@color/btn_time_text"
+                app:iconTint="@color/btn_time_text" />
+
+            <!-- 7. ARAMA PLANLA -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCallSchedule"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_call_schedule"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_call"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/btn_call_bg"
+                android:textColor="@color/btn_call_text"
+                app:iconTint="@color/btn_call_text" />
+
+            <!-- 8. MESAJ ŞABLONLARI -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTemplates"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_templates"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_edit"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/surface"
+                android:textColor="@color/text_primary"
+                app:strokeColor="@color/card_border"
+                app:strokeWidth="1dp"
+                app:iconTint="@color/secondary" />
+
+            <!-- 9. GÖREV GEÇMİŞİ -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnHistory"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_history"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_recent_history"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/surface"
+                android:textColor="@color/text_primary"
+                app:strokeColor="@color/card_border"
+                app:strokeWidth="1dp"
+                app:iconTint="@color/text_secondary" />
+
+            <!-- 10. YEDEKLEME & AYARLAR -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnBackup"
+                android:layout_width="0dp"
+                android:layout_height="72dp"
+                android:layout_columnWeight="1"
+                android:text="@string/btn_backup"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                app:cornerRadius="12dp"
+                app:icon="@android:drawable/ic_menu_preferences"
+                app:iconGravity="textStart"
+                app:backgroundTint="@color/surface"
+                android:textColor="@color/text_primary"
+                app:strokeColor="@color/card_border"
+                app:strokeWidth="1dp"
+                app:iconTint="@color/text_secondary" />
+
+        </GridLayout>
+
+        <!-- Bugünkü Görevler Listesi Başlığı -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/today_tasks"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvTodayTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false" />
+
+        <TextView
+            android:id="@+id/tvEmptyTasks"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/no_tasks_today"
+            android:textColor="@color/text_muted"
+            android:textSize="14sp"
+            android:padding="16dp"
+            android:gravity="center"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

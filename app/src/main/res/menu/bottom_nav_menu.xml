@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@android:drawable/ic_menu_today"
+        android:title="Ana Sayfa" />
+
+    <item
+        android:id="@+id/nav_messages"
+        android:icon="@android:drawable/ic_dialog_email"
+        android:title="Mesajlar" />
+
+    <item
+        android:id="@+id/nav_contacts"
+        android:icon="@android:drawable/ic_menu_myplaces"
+        android:title="Kişiler" />
+
+    <item
+        android:id="@+id/nav_reminders"
+        android:icon="@android:drawable/ic_popup_reminder"
+        android:title="Hatırlatıcı" />
+
+    <item
+        android:id="@+id/nav_more"
+        android:icon="@android:drawable/ic_menu_more"
+        android:title="Diğer" />
+</menu>

@@ -1,0 +1,25 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">TELESEKRETER</string>
+    <string name="app_subtitle">Zamanında Hatırla, Zamanında İlet.</string>
+
+    <!-- Ana Menü Butonları (Büyük & Kolay Okunabilir) -->
+    <string name="btn_send_message">MESAJ GÖNDER</string>
+    <string name="btn_whatsapp_message">WHATSAPP MESAJ</string>
+    <string name="btn_schedule_message">ZAMANLA</string>
+    <string name="btn_bulk_message">TOPLU MESAJ</string>
+    <string name="btn_contacts">KİŞİLER &amp; GRUPLAR</string>
+    <string name="btn_birthdays">DOĞUM GÜNLERİ</string>
+    <string name="btn_reminders">HATIRLATICILAR</string>
+    <string name="btn_call_schedule">ARAMA PLANLA</string>
+    <string name="btn_templates">MESAJ ŞABLONLARI</string>
+    <string name="btn_history">GÖREV GEÇMİŞİ</string>
+    <string name="btn_backup">YEDEKLEME &amp; AYARLAR</string>
+
+    <!-- Genel Başlıklar ve Etiketler -->
+    <string name="today_tasks">Bugünkü Görevler</string>
+    <string name="upcoming_birthdays">Yaklaşan Doğum Günleri</string>
+    <string name="pending_messages">Bekleyen Mesajlar</string>
+    <string name="upcoming_calls">Yaklaşan Aramalar</string>
+    <string name="quick_actions">Hızlı İşlemler</string>
+    <string name="no_tasks_today">Bugün için planlanmış bir görev bulunmuyor.</string>
+</resources>
