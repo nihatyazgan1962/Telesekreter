@@ -23,4 +23,5 @@ Seçtiğiniz kişilere belirlediğiniz tarih ve saatte mesaj göndermenizi, topl
 
 ## 👨‍💻 Geliştirici
 
-**Nihat Yazgan** — Yazgan Bilişim
+**Yazgan Bilişim**  
+E-posta: yazganbilisim2026@gmail.com
